@@ -13,7 +13,13 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  let cadena = num.tostring();
+  for (let i = 0; i < cadena.length; i++) {
+    if (cadena[i] !== cadena[cadena.length - (i+1)]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 // No modifiques nada debajo de esta linea //

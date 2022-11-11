@@ -1,8 +1,8 @@
 /* 
   Importante: 
-  No modificar ni el nombre ni los argumetos que reciben las funciones, sólo deben escribir
+  No modificar ni el nombre ni los argumentos que reciben las funciones, sólo deben escribir
   código dentro de las funciones ya definidas. 
-  No comentar la funcion 
+  No comentar la función 
 */
 function buscarAmigo(amigos, nombre) {
   // La funcion llamada 'buscarAmigo' recibe como argumento un array llamado 'amigos' que contiene
@@ -14,6 +14,7 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
+  return amigos.filter(amigo => amigo["nombre"] === nombre);
   
 }
 
