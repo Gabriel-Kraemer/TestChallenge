@@ -14,8 +14,8 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
-  return amigos.filter(amigo => amigo["nombre"] === nombre);
-  
+  let miAmigo = amigos.filter(amigo => amigo["nombre"] === nombre);
+  return miAmigo[0];
 }
 
 // No modifiques nada debajo de esta linea //
