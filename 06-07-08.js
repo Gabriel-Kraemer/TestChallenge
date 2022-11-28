@@ -21,14 +21,18 @@ function crearClasePersona() {
       // { nombre: nombre, edad: edad} al arreglo de amigos de la persona.
       // No debe retornar nada.
       // Tu código aca:
-      let nuevoAmigo = { nombre: this.nombre, edad: this.edad };
+      let nuevoAmigo = { nombre: nombre, edad: edad };
+      this.amigos.push(nuevoAmigo);
     }
 
     addHobby(hobby) {
       // El método 'addHobby' recibe un string 'hobby' y debe agregarlo al arreglo de hobbies de la persona.
       // No debe retornar nada.
       // Tu código aca:
-      get
+      //let nuevoHobby = hobby;
+      let arr = this.hobbies;
+      arr.push(hobby);
+      
     }
     getFriends() {
       // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
@@ -37,6 +41,12 @@ function crearClasePersona() {
       // Suponiendo que la persona tiene estos amigos: [{nombre: 'martin', edad: 31},{nombre: 'toni', edad: 33}]
       // persona.getFriends() debería devolver ['martin', 'toni']
       // Tu código aca:
+      let susAmigos = [];
+      let arr = this.amigos;
+      arr.forEach(function (name) {
+        susAmigos.push(name["nombre"]);
+      });
+      return susAmigos;
 
     }
 
@@ -46,7 +56,8 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
-
+      let susHobbies = this.hobbies;
+      return susHobbies;
     }
 
     getPromedioEdad() {
@@ -65,8 +76,12 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
-      let p = this.amigos.reduce(promedio => promedio = amigos.edad/2);
-      return p;
+      let promedio = 0;
+      let arr = this.amigos;
+      arr.forEach(function (amigo){
+            promedio += amigo.edad/ arr.length ;
+      });
+      return promedio;
     }
   };
 
