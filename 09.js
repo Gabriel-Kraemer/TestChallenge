@@ -28,6 +28,12 @@ function filtrar(funcion) {
     if (p) return true;
     return false;
   }  
+  function p(arg) {
+    if (arg === this.arg) {
+      return true;
+    }
+    return false;
+  }
   
 };
 
